@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="sign-up.css"> 
+    <title>Signup Page</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="left">
+                <a href="home.html" class="logo">Blog<span> Unity</span></a>
+            </div>
+            <div class="right">
+                <a href="home.html" class="login">Home</a>
+                <a href="post.html" class="post_button">Post</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="signup">
+        <h1 class="signup-title home-title">Sign Up</h1>
+        <form class="signup-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn2">Sign Up</button>
+        </form>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the form element by its class
+            const form = document.querySelector('.signup-form');
+
+            // Add submit event listener to the form
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

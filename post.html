@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create a Post</title>
+    <link rel="stylesheet" href="post_blog.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="left">
+                <a href="home.html" class="logo">Blog<span> Unity</span></a>
+            </div>
+            <div class="right">
+                <a href="home.html" class="home-button">Home</a>
+                <a href="sign-up.html" class="login">Sign Up</a>
+                
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="container">
+        <h1>Create a New Blog</h1>
+        <form id="blogForm" action="process_post.php" method="post" enctype="multipart/form-data">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" required></textarea><br><br>
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" accept="image/*"><br><br>
+
+            <input type="submit" value="Submit" class="sub-button">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Posts</title>
+    <link rel="stylesheet" href="post_blog.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <div class="left">
+                <a href="home.html" class="logo">Blog<span> Unity</span></a>
+            </div>
+            <div class="right">
+                <a href="home.html" class="home-button">Home</a>
+                <a href="post.html" class="post_button">Post</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>My Blog</h1>
+        <div id="blog-posts" class="blog-posts"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetchBlogPosts();
+        });
+
+        function fetchBlogPosts() {
+            fetch('get_posts.php')
+                .then(response => response.json())
+                .then(data => {
+                    const blogPosts = document.getElementById('blog-posts');
+                    blogPosts.innerHTML = '';
+                    data.forEach(post => {
+                        const postElement = document.createElement('div');
+                        postElement.innerHTML = `
+                            <h2>${post.title}</h2>
+                            <p>${post.content}</p>
+                            <img src="${post.image}" alt="${post.title}" style="max-width: 100%">
+                            <hr>
+                            
+                        `;
+                        blogPosts.appendChild(postElement);
+                    });
+                });
+        }
+    </script>
+</body>
+</html>

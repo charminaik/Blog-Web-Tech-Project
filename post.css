@@ -1,0 +1,177 @@
+/* Reset some default styles */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header styles */
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav #menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+#searchbox {
+  display: none;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+.page-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #333;
+}
+
+#post-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.card-description h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Sidebar styles */
+#sidebar {
+  width: 30%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  margin-right: 20px;
+}
+
+#left-footer ul {
+  flex-direction: column;
+}
+
+#left-footer ul li {
+  margin-bottom: 10px;
+}
+
+#social-media-footer ul {
+  display: flex;
+}
+
+#social-media-footer ul li {
+  margin-right: 10px;
+}
+
+#social-media-footer ul li a {
+  color: #fff;
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #333;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav #menu-icon {
+    display: block;
+    cursor: pointer;
+  }
+
+  #searchbox {
+    display: block;
+    margin-top: 20px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  #post-container {
+    flex-direction: column;
+  }
+
+  #sidebar {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #left-footer ul {
+    margin-bottom: 20px;
+  }
+}

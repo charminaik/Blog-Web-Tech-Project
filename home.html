@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trend Blogger</title>
+    <!-- Box-icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="nav container">
+            <div class="left">
+                <a href="home.html" class="logo">Blog<span> Unity</span></a>
+            </div>
+            <div class="right">
+                <a href="sign-up.html" class="login">Sign Up</a>
+                <a href="post.html" class="post_button">Post</a>
+                <a href="index.html" class="post_button">Your Posts</a>
+                
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="home-text container">
+            <h2 class="home-title" style="color:rgba(187, 124, 87, 0.651);">Blog Unity: Bloggers of the new era!!!!</h2>
+            <span class="home-subtitle" >Your source of great content</span>
+        </div>
+    </section>
+
+    <section class="about container" id="about">
+        <div class="contentBx">
+            <h1 class="titleText">Catch up with the trending topics</h1>
+            <h2>Here’s Everything You Can Do With Copilot, the Generative AI Assistant on Windows 11</h2>
+            <p class="title-text">
+                Despite plenty of misgivings, artificial intelligence—and in particular, generative AI that produces text and images from prompts—continues to be pushed into the hardware and software we use every day.
+                Microsoft has been active in the space, adding AI chatbot capabilities to its Bing search engine earlier this year, and it's now previewing an early version of its new Copilot AI assistant in Windows 11.
+            </p>
+            <a href="blogs_post.html" class="btn2" target="_blank">Read more</a>
+            
+        </div>
+        <div class="imgBx">
+            <img src="images/blog_1.webp" alt="" class="fitBg">
+        </div>
+    </section>
+
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="sec aboutus">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus quisquam minus quo illo numquam vel incidunt pariatur hic commodi expedita tempora praesentium at iure fugiat ea, quam laborum aperiam veritatis.</p>
+                <ul class="sci">
+                    <li><a href="#"><i class="bx bxl-facebook"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-instagram"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-twitter"></i></a></li>
+                    <li><a href="#"><i class="bx bxl-linkedin"></i></a></li>
+                </ul>
+            </div>
+            <div class="sec quicklinks">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Index</a></li>
+                    <li><a href="post.html">Post</a></li>
+                </ul>
+            </div>
+            <div class="sec contactBx">
+                <h2>Contact Info</h2>
+                <ul class="info">
+                    <li>
+                        <span><i class='bx bxs-map'></i></span>
+                        <span>6444 Banglore street <br> Brighton PA 33445 <br> INDIA</span>
+                    </li>
+                    <li>
+                        <span><i class='bx bx-envelope' ></i></span>
+                        <p><a href="blogunity12@gmail.com">blogunity12@gmail.com</a></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fetch and display blog posts from index.html
+            $.get('index.html', function(data) {
+                var blogContent = $(data).find('.blog-posts').html();
+                $('.post').html(blogContent);
+            });
+        });
+    </script>
+</body>
+</html>
